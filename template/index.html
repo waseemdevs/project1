@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input { margin: 10px; padding: 8px; width: 300px; }
+        button { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <h1>Cancer Prediction Model</h1>
+    <form action="/predict" method="post">
+        <input type="text" name="Age" placeholder="Enter Age" required><br>
+        <input type="text" name="Gender" placeholder="Enter Gender (0 for Male, 1 for Female)" required><br>
+        <input type="text" name="Air_Pollution" placeholder="Enter Air Pollution Level" required><br>
+        <input type="text" name="Alcohol_use" placeholder="Enter Alcohol Use" required><br>
+        <input type="text" name="Dust_Allergy" placeholder="Enter Dust Allergy Level" required><br>
+        <input type="text" name="Occupational_Hazards" placeholder="Enter Occupational Hazards" required><br>
+        <input type="text" name="Genetic_Risk" placeholder="Enter Genetic Risk Level" required><br>
+        <input type="text" name="Chronic_Lung_Disease" placeholder="Enter Chronic Lung Disease Level" required><br>
+        <input type="text" name="Balanced_Diet" placeholder="Enter Balanced Diet Level" required><br>
+        <input type="text" name="Obesity" placeholder="Enter Obesity Level" required><br>
+        <input type="text" name="Smoking" placeholder="Enter Smoking Level" required><br>
+        <input type="text" name="Passive_Smoker" placeholder="Enter Passive Smoker Level" required><br>
+        <input type="text" name="Chest_Pain" placeholder="Enter Chest Pain Level" required><br>
+        <input type="text" name="Coughing_of_Blood" placeholder="Enter Coughing of Blood Level" required><br>
+        <input type="text" name="Fatigue" placeholder="Enter Fatigue Level" required><br>
+        <input type="text" name="Weight_Loss" placeholder="Enter Weight Loss Level" required><br>
+        <input type="text" name="Shortness_of_Breath" placeholder="Enter Shortness of Breath Level" required><br>
+        <input type="text" name="Wheezing" placeholder="Enter Wheezing Level" required><br>
+        <input type="text" name="Swallowing_Difficulty" placeholder="Enter Swallowing Difficulty Level" required><br>
+        <input type="text" name="Clubbing_of_Finger_Nails" placeholder="Enter Clubbing of Finger Nails Level" required><br>
+        <input type="text" name="Frequent_Cold" placeholder="Enter Frequent Cold Level" required><br>
+        <input type="text" name="Dry_Cough" placeholder="Enter Dry Cough Level" required><br>
+        <input type="text" name="Snoring" placeholder="Enter Snoring Level" required><br>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
